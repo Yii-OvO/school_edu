@@ -1,0 +1,22 @@
+
+# CLI tool, only in development environment.
+# https://goframe.org/pages/viewpage.action?pageId=3673173
+gfcli:
+
+  #  工具编译配置
+  build:
+    name: "gf-admin-community"
+    arch: "amd64"
+    system: "linux,darwin,windows"
+    mod: ""
+    cgo: 0
+
+
+  #  dao生成
+  gen:
+    dao:
+      - link: "pgsql:user=kuaimk password=Kuaimk23db host=192.168.1.105 port=5432 dbname=schools_edu sslmode=disable"
+        tables: "edu_fd_account,edu_fd_account_bill,edu_fd_account_detail,edu_fd_bank_card,edu_fd_currency,edu_fd_invoice,edu_fd_invoice_detail,edu_school,edu_school_teacher,edu_school_student,edu_school_class,edu_school_class_member"
+        descriptionTag: true
+        noModelComment: true
+        withTime: false
